@@ -1,0 +1,48 @@
+<ion-header >
+  <ion-toolbar color="dark">
+    <ion-title >
+      Calculatrice
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  
+  <table>
+    <tr>
+      <td colspan="4"><ion-input type="text" color="light" value="{{valeur}}" maxlength="15"></ion-input></td>
+    </tr>
+    <tr>
+      <td><ion-button shape="round" color="light" (click)="onClear()">AC</ion-button></td>
+      <td><ion-button shape="round" color="light" (click)="onChangeSigne()">+/-</ion-button></td>
+      <td><ion-button shape="round" color="light" (click)="onPercent()">%</ion-button></td>
+      <td><ion-button shape="round" color="warning" (click)="onDiv()">÷</ion-button></td>
+    </tr>
+
+    <tr>
+      <td><ion-button shape="round" color="medium" (click)="onClick(7)">7</ion-button></td>
+      <td><ion-button shape="round" color="medium" (click)="onClick(8)">8</ion-button></td>
+      <td><ion-button shape="round" color="medium" (click)="onClick(9)">9</ion-button></td>
+      <td><ion-button shape="round" color="warning" (click)="onMult()">X</ion-button></td>
+    </tr>
+
+    <tr>
+      <td><ion-button shape="round" color="medium" (click)="onClick(4)">4</ion-button></td>
+      <td><ion-button shape="round" color="medium" (click)="onClick(5)">5</ion-button></td>
+      <td><ion-button shape="round" color="medium" (click)="onClick(6)">6</ion-button></td>
+      <td><ion-button shape="round" color="warning" (click)="onSub()">-</ion-button></td>
+    </tr>
+
+    <tr>
+      <td><ion-button shape="round" color="medium" (click)="onClick(1)">1</ion-button></td>
+      <td><ion-button shape="round" color="medium" (click)="onClick(2)">2</ion-button></td>
+      <td><ion-button shape="round" color="medium" (click)="onClick(3)">3</ion-button></td>
+      <td><ion-button shape="round" [color]="couleur" (click)="onAdd()">+</ion-button ></td>
+    <tr>
+      <td colspan="2"><ion-button style="width:11em;" expand="block" shape="round" color="medium" (click)="onClick(0)">0</ion-button></td>
+      <td><ion-button shape="round" color="medium" (click)="onComa()">,</ion-button></td>
+      <td><ion-button shape="round" color="warning" (click)="onEqual()">=</ion-button></td>
+    </tr>
+  </table>
+
+</ion-content>
