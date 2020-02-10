@@ -20,23 +20,17 @@
     </tr>
 
     <tr>
-      <td><ion-button shape="round" color="medium" (click)="onClick(7)">7</ion-button></td>
-      <td><ion-button shape="round" color="medium" (click)="onClick(8)">8</ion-button></td>
-      <td><ion-button shape="round" color="medium" (click)="onClick(9)">9</ion-button></td>
+     <td *ngFor="let oneButton of buttons1" ><ion-button shape="round" color="medium" (click)="onClick(oneButton)">{{oneButton}}</ion-button></td>
       <td><ion-button shape="round" color="warning" (click)="onMult()">X</ion-button></td>
     </tr>
 
     <tr>
-      <td><ion-button shape="round" color="medium" (click)="onClick(4)">4</ion-button></td>
-      <td><ion-button shape="round" color="medium" (click)="onClick(5)">5</ion-button></td>
-      <td><ion-button shape="round" color="medium" (click)="onClick(6)">6</ion-button></td>
+      <td *ngFor="let oneButton of buttons2"><ion-button  shape="round" color="medium" (click)="onClick(oneButton)">{{oneButton}}</ion-button></td>
       <td><ion-button shape="round" color="warning" (click)="onSub()">-</ion-button></td>
     </tr>
 
     <tr>
-      <td><ion-button shape="round" color="medium" (click)="onClick(1)">1</ion-button></td>
-      <td><ion-button shape="round" color="medium" (click)="onClick(2)">2</ion-button></td>
-      <td><ion-button shape="round" color="medium" (click)="onClick(3)">3</ion-button></td>
+      <td *ngFor="let oneButton of buttons3"><ion-button  shape="round" color="medium" (click)="onClick(oneButton)">{{oneButton}}</ion-button></td>
       <td><ion-button shape="round" [color]="couleur" (click)="onAdd()">+</ion-button ></td>
     <tr>
       <td colspan="2"><ion-button style="width:11em;" expand="block" shape="round" color="medium" (click)="onClick(0)">0</ion-button></td>
